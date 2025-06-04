@@ -275,7 +275,7 @@ The 2nd store test is more interesting. It shows that municipalities that open a
 :::: {.columns}
 
 ::: {.column width="50%"}
-+ temp
++ tempxxxxx
 :::
 
 ::: {.column width="50%"}
