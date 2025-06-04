@@ -320,14 +320,47 @@ If we multiply the coefficient on total alcohol sales from the 'Saturday' experi
 
 
 # Robustness
-...
+Describe section
 
-## SUTVA
+## SUTVA: definiton
 :::: {.columns}
 ::: {.column width="40%"}
 Describe the test and treatment df
 :::
 ::: {.column width="60%"}
-![](images/sutva_map.svg){fig-align="center" width="24cm"}
+![](images/sutva_map.svg){fig-align="center"}
+
+
 :::
 ::::
+
+## SUTVA: results
+:::: {.columns}
+::: {.column width="40%"}
+Interpretation
+:::
+::: {.column width="60%"}
+![](images/sutva_results.svg){fig-align="center" width="11cm"}
+
+
+:::
+::::
+
+## HonestDiD: Intuition
+:::: {.columns}
+::: {.column width="30%"}
++ Relative Magnitudes
++ Smoothness Restriction?
+:::
+::: {.column width="70%"}
+![Source: https://github.com/Mixtape-Sessions/Advanced-DID/blob/main/Slides/03-violations.pdf](images/honest_ilustration.svg){fig-align="center" width="14cm"}
+
+:::
+::::
+
+
+
+
+## HonestDiD: Results
+
+![](images/RM_and_smoothnes.svg){fig-align="center" width="20cm"}
