@@ -7,6 +7,10 @@ date-format: "DD MMMM, YYYY"
 format: 
   revealjs:
     multiplex: true
+    navigation-mode: linear      # only horizontal navigation keys/swipes
+    scroll-view:                 # configure the new Scroll-View feature
+      activation-width: 0        # 0 = never auto-enter Scroll View
+      snap: mandatory            # (default) snap to whole slides if user toggles it on
     embed-resources: true
     smaller: true # Fits longer text to slide
     slide-number: true
@@ -246,11 +250,11 @@ The 2nd store test is more interesting. It shows that municipalities that open a
 ## All-cause mortality
 :::: {.columns}
 
-::: {.column width="50%"}
-+ temp
+::: {.column width="30%"}
++ Decide if you want one or 2 columns (depends on if you want any text. IWait until manuscript is done.)
 :::
 
-::: {.column width="50%"}
+::: {.column width="70%"}
 ![](images/mod1_deaths_CS.svg)
 :::
 
@@ -279,13 +283,23 @@ The 2nd store test is more interesting. It shows that municipalities that open a
 :::
 
 ::: {.column width="50%"}
-![](images/PV_main_rollout.svg)
+![](images/mod3_deaths_CS.svg)
 :::
 
 ::::
 
 ## MVs
+:::: {.columns}
 
+::: {.column width="50%"}
++ temp
+:::
+
+::: {.column width="50%"}
+![](images/mod4_cars_CS.svg)
+:::
+
+::::
 
 
 # Dose size compared
