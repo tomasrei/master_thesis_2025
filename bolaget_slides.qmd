@@ -7,10 +7,6 @@ date-format: "DD MMMM, YYYY"
 format: 
   revealjs:
     multiplex: true
-    navigation-mode: linear      # only horizontal navigation keys/swipes
-    scroll-view:                 # configure the new Scroll-View feature
-      activation-width: 0        # 0 = never auto-enter Scroll View
-      snap: mandatory            # (default) snap to whole slides if user toggles it on
     embed-resources: true
     smaller: true # Fits longer text to slide
     slide-number: true
