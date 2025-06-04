@@ -1,0 +1,23 @@
+.reveal .slide-logo {
+  height: 150px !important;
+  width: 150px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+
+
+/* SMALL everywhere (default) */
+/*.reveal .slide-logo {
+/*  height: 70px !important;
+/*  width:  70px !important;
+/*  max-width:  unset !important;
+/*  max-height: unset !important;
+/*}
+/*
+/*/* LARGE **only** while the real title slide is being shown */
+/*.reveal:has(section#title-slide.present)   .slide-logo,
+/*.reveal:has(section[data-title-slide].present) .slide-logo {
+/*  height: 150px !important;
+/*  width:  150px !important;
+/*}

@@ -1,0 +1,323 @@
+---
+title: "Alcohol Availability and Public Health"
+subtitle: "Causal Evidence from a Post-Rationing Reform"
+author: Tomas Reivinger
+date: last-modified
+date-format: "DD MMMM, YYYY"
+format: 
+  revealjs:
+    multiplex: true
+    embed-resources: true
+    smaller: true # Fits longer text to slide
+    slide-number: true
+    center-title-slide: false
+    sc-sb-title: true
+    logo: images/SU-logo.svg
+    css: theme/logo-css.css
+    theme: theme/tomas-theme.scss
+filters: 
+  - reveal-header
+slide-level: 2
+number-sections: true
+engine: knitr
+#embed-resources: true
+editor: visual
+---
+# TODO
+
+
+<!-- 
+
+https://github.com/shafayetShafee/reveal-header?tab=readme-ov-file 
+
+Alternative: https://github.com/shafayetShafee/metropolis-beamer/tree/main
+-->
+
++ Remove section numbers completley?
++ The images before the table or NOT in svg format and therefore blurry. fix.
++ Read the tables and write in significance stars with red ink in case I get asked about it!
+
+# Motivation
+
+It's a big problem
+
+Limited credible *causal* evidence
+
+
+## Big problem
+...
+
+## Little causal evidence
+
+:::: {.columns}
+
+::: {.column width="40%"}
++ A lot of evidence for a detrimental effect of alcohol on health
+
++ Difficult to identify causal ...
+
++ Natural experiments, a fix?
+:::
+
+::: {.column width="60%"}
+
+![](images/j_curve.png){.nostretch fig-align="left" width="24cm"}
+:::
+
+::::
+
+
+
+
+
+# Roadmap
+
+1. ~~Motivation~~
+1.  Historical Background 
+2.  Institutional setting
+3.  Data
+4.  Empirical strategy and design
+5.  Results
+6.  Robustness
+7.  Discussion
+
+# Historical Background
+
+:::: {.columns}
+
+::: {.column width="40%"}
++ Before Bratt: high levels of alcohol consumption and the 1922 prohibition referendum
++ The Bratt system: a system of individual control
++ After Bratt: Systembolaget
+
+
+:::
+
+::: {.column width="60%"}
+![](images/consumption_plot_simple.png){.nostretch fig-align="center" width="24cm"}
+:::
+
+::::
+
+
+# Institutional setting
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
++ TODO: Edit these 2 in oblsidian and remove whitespace betwen them and save as SVG
+
+:::
+
+::: {.column width="50%"}
+
+![](images/share_munic_treated.png)
+
+![](images/national_store_plot.png)
+:::
+
+::::
+
+
+
+
+
+## A snapshot from 1955
+
+:::: {.columns}
+
+::: {.column width="50%"}
++ No delivery-point sales on the municipality $\times$ year level
+:::
+
+::: {.column width="50%"}
+![](images/snapshot_1955.svg){fig-align="center" width="8cm"}
+:::
+
+::::
+
+
+# Data
+
++ All cause mortality (1968-2023)
+
++ Motor vehicle accidents (1985-2023)
+
++ Sales in Liters of alcohol (1978-2008)
+
+## Municipality reforms and sample restrictions
+
++ 900 municipalities in 1968, 288 in 1996 (Source: REGINA, SCB)
+
++ Mortality data aggregated to 1995 municipal borders
+
+INSERT DCDH AND CS PLOT HERE (MAKE A NEW ONE!)
+  + Or maybe skip as this reveals the result? Maybe add at the end, after robustness?
+
+
+
+
+# Empirical strategy and design
+
+The population equation of interest is
+
+\begin{equation}
+    Y_{mt} = \gamma_m + \lambda_t + \beta_{mt}  \text{store}_{mt} + \epsilon_{mt}\, ,
+    \label{eq:pop-eq-of-interest}
+\end{equation}
+
+
+
++ Callaway and Sant'Anna (2021) 
++ Long differences with base-period $t=-1$
++ Time-invariant controls (population size)
+
+
+
+# Results
+
+1. Sales
+2. Mortality
+3. Motor vehicle accidents
+
+## Staggered adoption schedule (sales)
+
+:::: {.columns}
+
+::: {.column width="50%"}
++ 1st store test uses municipalities with no store a the control group
+
++ 2nd store test uses municipalities with *only* one store as control group
+:::
+
+::: {.column width="50%"}
+![](images/PV_store_tests.svg){fig-align="center"}
+:::
+
+::::
+
+
+
+
+
+
+## First and second store results {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+The 1st store test (mechanically) confirms that the treatment is well-defined, i.e. municipalities see positive in-store sales compared to municipalities without a store.
+
++ (The reason why the first coefficient is much lower is because of late in the year store openings)
+
+The 2nd store test is more interesting. It shows that municipalities that open a 2nd store increase their sales with about 25%.
+
+
+
+
+:::
+
+::: {.column width="50%"}
+![](images/sales_results.svg){fig-align="center" width="11cm"}
+:::
+
+::::
+
+
+
+
+
+## Staggered adoption schedule (mortality)
+
+:::: {.columns}
+
+::: {.column width="50%"}
++ temp
+:::
+
+::: {.column width="50%"}
+![](images/PV_main_rollout.svg)
+:::
+
+::::
+
+
+## All-cause mortality
+:::: {.columns}
+
+::: {.column width="50%"}
++ temp
+:::
+
+::: {.column width="50%"}
+![](images/mod1_deaths_CS.svg)
+:::
+
+::::
+
+## Population size
+
+:::: {.columns}
+
+::: {.column width="50%"}
++ temp
+:::
+
+::: {.column width="50%"}
+![](images/mod2_deaths_CS.svg)
+:::
+
+::::
+
+## All-cause mortality adjusting for population size
+
+:::: {.columns}
+
+::: {.column width="50%"}
++ temp
+:::
+
+::: {.column width="50%"}
+![](images/PV_main_rollout.svg)
+:::
+
+::::
+
+## MVs
+
+
+
+# Dose size compared
+
+:::: {.columns}
+::: {.column width="40%"}
+Caveats:
+
++ Substitution effect?
+  + Moonshine
+  + Pickup points (add percentages here)
+  + Other sources of alcohol
+
+If we multiply the coefficient on total alcohol sales from the 'Saturday' experiment by the number of days Systembolaget is open (today), we get $0.035 \times 6 = 0.21$, compared to the $0.25$ from the 2nd store test (column 5). 
+:::
+
+::: {.column width="60%"}
+![](images/dose_table.svg){fig-align="center" width="24cm"}
+:::
+
+::::
+
+
+# Robustness
+...
+
+## SUTVA
+:::: {.columns}
+::: {.column width="40%"}
+Describe the test and treatment df
+:::
+::: {.column width="60%"}
+![](images/sutva_map.svg){fig-align="center" width="24cm"}
+:::
+::::
