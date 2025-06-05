@@ -10,7 +10,7 @@ format:
       id: '6d3f7005d892bd42'   # Needed for synch with other machines
       secret: '17491149286328418528'  # Also needed
       url: 'https://reveal-multiplex.glitch.me/'
-    embed-resources: true 
+    embed-resources: false # needed for multiplex to work 
     smaller: true # Fits longer text to slide
     slide-number: true
     center-title-slide: false
@@ -27,62 +27,15 @@ engine: knitr
 editor: visual
 ---
 
-TODO:
+# Introduction
 
 
-<!-- 
-
-https://github.com/shafayetShafee/reveal-header?tab=readme-ov-file 
-
-Alternative: https://github.com/shafayetShafee/metropolis-beamer/tree/main
--->
-
-+ Do 1st: read the text directly and time it. Decide what todo after this!
-+ Add more bullets to the historical background!
-+ fix spelling error in 1st plot.
-+ Remove the motivation?
-+ Put the double-plots side by side and make them bigger (remove text if needed)
-+ The images before the table or NOT in svg format and therefore blurry. fix.
-+ Read the tables in the paper and write in significance stars with red ink in case I get asked about it!
-+ look at all the plots in the appendix
-
-# Motivation
-
-1. It's a big problem
-
-2. Limited credible *causal* evidence
-
-
-
-## Big problem
-...
-
-## Little causal evidence
-
-:::: {.columns}
-
-::: {.column width="40%"}
-+ A lot of evidence for a detrimental effect of alcohol on health
-
-+ Difficult to identify causal ...
-
-+ Natural experiments, a fix?
-:::
-
-::: {.column width="60%"}
-
-![](images/j_curve.png){.nostretch fig-align="left" width="24cm"}
-:::
-
-::::
-
-
-
+....
 
 
 # Roadmap
 
-1. ~~Motivation~~
+1. ~~Introduction~~
 1.  Roadmap
 1.  Historical Background
 2.  Institutional setting
