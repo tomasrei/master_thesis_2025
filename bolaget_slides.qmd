@@ -270,10 +270,11 @@ Caveats:
 
 + Substitution effect?
   + Moonshine
-  + Pickup points (add percentages here)
+  + Pickup points^[The annual report *occasionally* provides the number of individual shipments each year -- falling within the range of 0.9 and 2.6 million per year -- representing from 1.1% to 3% all sales. 3.5% in 1987, 2% in 1999, 2% in 2000, and 1.1% in 2006.]
   + Other sources of alcohol
+  + Is all of it substitution or just some?
 
-If we multiply the coefficient on total alcohol sales from the 'Saturday' experiment by the number of days Systembolaget is open (today), we get $0.035 \times 6 = 0.21$, compared to the $0.25$ from the 2nd store test (column 5). 
+*$0.035 \times 6 = 0.21$, compared to the $0.25$ from the 2nd store test (column 5). 
 :::
 
 ::: {.column width="60%"}
@@ -281,8 +282,6 @@ If we multiply the coefficient on total alcohol sales from the 'Saturday' experi
 :::
 
 ::::
-
-....
 
 ## HonestDiD: Intuition
 :::: {.columns}
