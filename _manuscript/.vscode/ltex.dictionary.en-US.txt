@@ -1,1 +1,6 @@
 Systembolaget
+municipality-varible
+systembolag
+sales-respones
+covariate
+motorviechle

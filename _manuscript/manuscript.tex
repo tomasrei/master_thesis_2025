@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
+\usepackage[style=authoryear]{biblatex} % Required for \parencite command
+\usepackage{xcolor} % Required for \textcolor
 
 % Custom todo command
 \newcommand{\TODO}[1]{\textcolor{red}{[#1]}}
@@ -17,145 +19,349 @@
 \thispagestyle{empty} % Remove page number
 \begin{center} This version: \today\end{center}
 
+\section{Welcome}
+Hi and welcome everyone. Hope you still have some energy left.
+
+My name is Tomas Reivinger and, as you know, I will present the result of my thesis today. 
+
+I am hoping to spend about 15 minutes presenting and then hand over the remaining time to my opponent (??) NAME. 
+
+If you have any questions or want me to clarify something, please interrupt me anytime. 
+
+If you are confused, so is probably everyone else (BADA-BING).
+
+Sounds good? Ok, lets get started.
+
+
 \section{Motivation}
+
+\TODO{I DECIDED, YESTERDAY, TO REMOVE THE MOTIVATION FOR THE RESEARCH TOPIC TO SAVE SOME TIME. WHILE INTERESTING, I BELIVE THAT }
+
 % starts at p.2
-Motivation for studying the effect of alcohol on acute harms, in a way, does not need very deep motivation. By lived experience, it is probably clear to most that there are harms, as well as pleasures, from consumption of alcohol.
+I think that studying the effect of alcohol on health does not need a lot of motivation. I think most would agree that there are harms from consumption of alcohol.
 
-Nevertheless, the figures from (WHO?), provides some motivating, quantitatively .... numbers..
 
-While these numbers certainly are suggestive, there are real problems with identifying the causal effect of alcohol on health.
+Nevertheless, I would like to make two points to convince that this question is interesting. 
 
-\medskip
+I will first whow you some numbers on.. I will then explain some methodological problems that exist in this field. 
+
 \textbf{NEXT SLIDE}
-\medskip
 
-This figure shows a typical J-curve that has been reproduced many times in epidemiology. Perhaps you have heard about the benefits of drinking 1 or 2 glasses of wine? 
+First...
 
-Such suggestions probably come from a curve like this. It shows compares the outcomes for non-drinkers (normalized to 1) with those of consume 1,2, 3 or more drinks per day. 
+the figures from (WHO?), provides some motivating, quantitatively .... numbers..
 
-Higher values imply higher risk. Drinking a couple of units seems to improve health relative to non-drinkers, but more than that tends to be associated with worse outcomes.
+\textbf{NEXT SLIDE}
 
-The problem, of course, is that of omitted variable bias, reverse causality as well as other selection issues. To give one example why, the comparison group (i.e non-drinkers) contain so-called sick quitters and...
+The second reason is methodological. While the number on the previous slide certainly are suggestive, there are real problems with identifying the causal effect of alcohol on health on humans.
+
+\TODO{Of course, experiment on animals have been conducted.}
+
+This figure shows a typical J-curve that has been reproduced many times in epidemiology. Perhaps you have heard about the  \textbf{health} benefits of drinking 1 or 2 glasses of wine? 
+
+Such suggestions probably come from a curve like this. This is a relative risk curve and compares the outcomes for non-drinkers (normalized to 1) with those that consume 1, 2, 3 or more drinks per day. 
+
+Higher values on the  \textbf{y-axis} imply higher risk. Drinking a couple of units seems to improve health relative to non-drinkers, but more than that tends to be associated with worse outcomes.
+
+The problem, of course, is that of omitted variable bias, reverse causality as well as other selection issues. 
+
+I will provide one example why these results are not reliable. 
+
+It is commonly known that the comparison group,  non-drinkers, contain so-called sick quitters. Sick quitters are persons that have problems with their health for various reasons and therefore abstain alcohol.
 
 Researcher can account for that in various ways but the problems remain.
 
-\medskip
-\textbf{NEXT SLIDE} (Natural experiments a fix?)
-\medskip 
+The use of quasi experimental designs are a natural alternative. 
 
-As you all can imagine, using a natural experiment to solve these issues are tempting. 
-
-TODO: List what have been done, explain that the execution is a little, or more, shaky. Perhaps the best research is... MLDA... But even this research has some real donsides. 1. no birthDAY 2. Very limited population.
-
-Can we estimate the ATT (i,e not local ATT as in MLDA) somehow? (this is motivation for my thesis)
-
-BE SURE TO MENTION HERE WHET I DO IN THE THESIS: i.e use a staggered adoption of systembolaget stores.
+I will not go very deep on this, except to mention one paper that, perhaps, is more relevant to my thesis than others. 
 
 
+\textbf{NEXT SLIDE}
 \section{Roadmap}
 
-Briefly about the roadmap
+Here is the roadmap for this seminar.
+
+The institutional setting is fairly unique in that there has been a monopoly provider of alcohol for so long and I will therefore provide a brief historical background before I go into the institutional setting. 
+
+The rest is self-explanatory I think and mostly follows the structure of the paper.
+
+Ok, \textbf{NEXT SLIDE}.
+
+\TODO{1. ~~Motivation~~
+1.  Historical Background 
+2.  Institutional setting
+3.  Data
+4.  Empirical strategy and design
+5.  Results
+6.  Robustness tests
+7.  Discussion}
+
+
+
+\section{Historical background}
+
+To understand  \textbf{what}  Systembolaget is, I will start by trying to explain  \textbf{why}  it exists in the first place. 
+
+The key fact is that Sweden had a serious drinking problem. 
+
+Historically, Sweden belonged to the so-called \textbf{Vodka belt} and a lot of effort and political capital had been spent in the late 19th- and early 20th-century to prevent excessive drinking and mitigate social harms.
+
+These efforts let to the introduction of \emph{regional}  alcohol monopolies across the country between 1850 and 1870. A rationing card or booklet was introduced in 1917 and by 1920, the so-called Bratt system -- a wider system of individual control over alcohol consumption -- had been established all over Sweden. 
+
+The Bratt system entailed other restrictions, like temporary purchase-bans that the local  \textbf{sobriety board}  could issue, but the rationing booklet was the main star.
+
+\TODO{Example of "other restrictions": drunken public conduct, abuse}
+
+Even this was not considered strong enough by some, and eventually a referendum on a \emph{total}  prohibition was held in 1922. The side against won by a single percentage-point.
+
+\TODO{If Q: Bratt started approximately in 1917 and ended 1955. (Only the start date varies)}
+
+Fast-forward to 1955 and public support for the Bratt system had eroded and was ended by government mandate. At the same time, all local system companies where consolidated into a single company called  \textbf{Systembolaget}.
+
+\TODO{PAUSE}
+
+ \textbf{FIGURE:} The figure tells some of the story. It shows the average consumption of alcohol per person and year. It has been converted to Liters of 100 proof alcohol. To be concrete: 10 Liters of pure alcohol corresponds to 33 normal-sized vodka bottles (0.75Liters).
+
+The rationing book was introduced between 1914-1917 (introduction was staggered).
 
 \textbf{NEXT SLIDE}
 
-\section{Historical background}
-To understand what Systembolaget is, you need to understand why exist in the first place. 
+\section{Institutional setting}
 
-The first thing is that Sweden had a serious drinking problem and there was a lot of effort and political capital spent on preventing excessive drinking.
+ As mentioned before \TODO{dont forget to add to the intro}, I exploit this staggered expansion of Systembolaget stores. 
+ 
+ The setting is rather simple. 
 
-By 1920, the so-called Bratt system -- a system of individual control over alcohol consumption -- was established all over Sweden. DESCRIBE WHAT IT WAS HERE, ONE SENTENCE. Even this was not, by some, considered strong enough and a referendum on a total(?) prohibition was held in 1922, with the pro-prohibitionist list by a single percentage-point.
+ As seen in the figure to the right, just under half of the Swedish municipalities are treated in 1955 when Systembolaget is created. They then expand -- quite slowly -- until about 2010 when every municipality had opened a store. 
+ 
+ The left figure counts the number of stores in Sweden from 1955 until today.
 
-The Brat system was ended by... in the end of 1955.
+ \TODO{Knivsta and Nykvarn where established later.}
 
+ There were some rules, or guidelines, that Systembolaget followed that you can see at the bottom of the page.
 
+ Initially, the distance from the main city center to the nearest store was required to exceed 40 kilometers; and the main town had to have at least 5000 residents. These requirements were later relaxed (1982).
 
- \textbf{PLOT:} The plot shows the average consumption \emph{ converted to Liters of 100 proof alcohol}. For reference: TODO: add bottles of vodka AND important dates that you can refer to IF ASKED!
+ Systembolaget also had an explicit goal of 'a couple' new locations per year, although I suspect this was partly ignored later on
+ 
+ You can kind of see that the expansion increases after 1985 if you look closely.
 
- \section{Institutional setting}
- As mentioned before, I exploit the staggered expansion of Systembolaget stores. The setting is rather simple. 
+ \TODO{IF ASKED: it was the municipality (kommunfullmäktige) that applied.}
 
- As seen in the two plots on the right, just under half of the Swedish municipalities are treated in 1955 when Systembolaget is created.
+\emph{More importantly}, there were alternative ways to acquire alcohol than Systembolaget. Namely, through a system of delivery points.
 
- There were some rules, or rather guidelines that Systembolaget followed. Initially, the distance from the main city center to the nearest store needed to excced 40 kilometers and the main town had to have at least 5000 residents. These requirements were later relaxed.
+\textbf{NEXT SLIDE}
 
- More importantly, there were alternative ways to acquire alcohol than stores. Namely, through a system of delivery points.
+Here is a snapshot from 1955. 
 
- \textbf{NEXT SLIDE}
+As far as I am aware, there's no information on the number of delivery points on the municipality-year level. 
 
- ..
+Notice that the number of delivery-points were more than double that of actual stores.
 
+I will return to this issue later.
 
-
-
+\textbf{NEXT SLIDE}
 
 \section{Data}
 
-First, the data on all-cause mortality is a municipality level time-series that captures the universe of deaths by any cause. The municipality in the data is place of residence, not place of death. The reason for is simply that the national board of health only started collecting information on the place of death in 2015. The NBHW (socialstyrelsen) has estimated that about 80\% of cases occur in the municipality of residence.
+I  will now describe the three main data-sources.
 
-The data over car accidents contains all accidents -- light, severe and fatal -- that \emph{have been reported by the police}  and the municipality variable represents the place where the accident occurs. In general, the more severe the accident is, the more likely it is that the police receives a report. Of course, lighter accidents that involve a drunk driver have a higher probability of being missing in the dataset.
+First, the data on all-cause mortality is a municipality level time-series that contains the universe of deaths \emph{from any cause}. 
 
-We can return to the problems with the municipality-varible during the discussion later if necessary. I will just note that there are some problems here with measurement errors that are hard fix.
+The municipality in the data is place of residence and not place of death. 
 
-Finally, I have the data on sales -- in liters of alcohol -- by municipality that I use to estimate the 'first stage' effects.
+The reason for this is simply that the national board of health (socialstyrelsen) only started collecting information on the place of death in 2015. However, they have estimated that about 80\% of cases occur in the municipality of residence.
+
+The data over car accidents contains all accidents -- light, severe and fatal -- that \emph{have been reported by the police}. 
+
+In this case, the municipality variable represents the place where the accident occured. 
+
+In general, the more severe the accident is, the more likely it is that the police receives a report. Of course, lighter accidents that involves a drunk driving is less likely to be reported, so not all incidents are in the dataset.
+
+We can return to the problems with the municipality-varible during the discussion later if necessary. I will just note here that there are some problems with measurement error in the data.
+
+Finally, I have the data on sales -- in liters of alcohol -- that I use to estimate the 'first stage' effects.
 
  \textbf{NEXT SLIDE}
 
- Now I would like to say a few words about the municipality reforms and the sample restriction I do for the mortality data. 
+ Now I would like to make a few comments on the municipality reforms and the sample restriction I do for the mortality data. 
 
- Considering that there were 900 municipalities in the beginning of the period at hand, and only about 290 in the end, you might -- rightly I might add -- wonder about the idiosyncratic use of municipality border definitions. 
+ Considering that there were 900 municipalities at the start of the experiment, and only about 290 in the end, you might -- rightly -- wonder about the idiosyncratic use of municipality border definitions. 
 
-
-Firstly, Statistics Sweden have chosen to aggregate the data using the 1995 borders so there is no way for me to even consider using the smaller (landskommuner) in the eventstudy. 
+Firstly, Statistics Sweden have chosen to aggregate the data using the 1995 borders, so there is no way for me to even consider using the smaller (landsortskommuner) in the event study. 
 
 Second, even if I could use the older definitions, aggregating to a higher level would probably have been preferable anyway to get a longer time-series. 
 
-On the other hand, there is a discussion to be had about who is in the treated group. Arguably those living near a systembolag are more likely to take up treatment. This favors the smaller municipality definitions. If I had individual-level data, I would even consider drawing a smaller circle around each store and use that as the treatment definition.
+\emph{On the other hand} , there is a discussion to be had about who is de facto treated in the setting. Arguably those living near a systembolaget-store are more likely to take up treatment. This favors the smaller municipality definitions. 
 
-Lastly, I have restricted the data to the years 1968-1996. I have done this for mainly two reasons:
+\emph{If}  I had access to individual-level data, perhaps drawing a smaller circle around each store and use that as the treatment definition would be the best option.
 
-One: The estimators by Callaway and Sant'Anna (2021) and de Chaisemartin and D'Haultfœuille 2023 should be numerically equivalent without controls. They are not as you can see on the eventstudy on the right.
+Lastly, I have restricted the data to the years 1968-1996. 
 
-The other point is related to what is the most ethical point in regard to scientific praxis. We all agree that using sample selection to squeeze out an effect is unethical, but if the sample selection is "robust", then I would argue that sample selection is OK as long as we are being transparent.
+ \textbf{I have done this for mainly two reasons:} 
 
-Two: Because the mortality data was aggregated to the 1995 levels, that was the period I worked with in the early stages and the results you will see are robust to changing the end year to, for example 1985 or 1990.
+First point. The estimators by Callaway and Sant'Anna and de Chaisemartin \emph{should} be numerically equivalent without controls. They are not. You can see this on page 38 of the appendix.
 
-Either way, I belive my conclusion would have been about the same, if not the same using 1996 or 2023.
+%The other point is related to the question of what is the most ethical choice with regard to scientific praxis. We all agree that using sample selection to squeeze out an effect is unethical, but if the sample selection is "robust", then I would argue that it is OK as long as we are being transparent about the reasons for doing so.
 
-Q: ANY QUESTIONS SO FAR?
+The second point is more related to the ethics of sample selection.  The results you will see are robust to changing the end year to, for example 1985 or 1990, and I felt that this was reason enough to motivate the restriction. 
+
+I don't think the restriction changes the analysis in any major way, but I look forward to hearing your thought on this specific issue later.
+
+
+OK, ANY QUESTIONS SO FAR?
 
  \textbf{NEXT SLIDE}
 
- \section{Empirical strategy and design}
+ \section{Empirical strategy}
 
-The population equation of interest is
+ Ok, This is the population equation of interest:
 
 \begin{equation}
     Y_{mt} = \gamma_m + \lambda_t + \beta_{mt}  \text{store}_{mt} + \epsilon_{mt}\, ,
     \label{eq:pop-eq-of-interest}
 \end{equation}
 
-where $m = 1,2,\cdots, 115$ indicates municipality and $t = 1,2, \cdots, 29$ indicates time, in this case years. The terms $\gamma_m$ and $\lambda_t$ indicate municipality and time fixed effects, respectively. The dependent variable $Y_{mt}$ is all-cause mortality, population size and sales in liters of alcohol. An indicator $\text{store}_{mt}$ takes the value 1 if municipality $m$ at year $t$ has opened a Systembolaget store. Importantly, once a municipality is treated it stays treated. 
+where 
+\begin{enumerate}
+    \item $m = 1,2,\cdots, 115$ indicates municipality
+    \item $t = 1,2, \cdots, 29$ indicates time, in this case years
+    \item $\gamma_m$ (gamma) and $\lambda_t$ (lamda) indicate municipality and time fixed effects
+    \item the indicator $\text{store}_{mt}$ takes the value 1 if municipality $m$ at year $t$ has opened a Systembolaget and thus defines the treatment timing.
+    \item The dependent variable $Y_{mt}$ is all-cause mortality, population size and sales in liters of alcohol in this thesis.
+\end{enumerate}
 
-It has historically been common to estimate (\ref{eq:pop-eq-of-interest}) using two-way fixed effects (TWFE), but it is now well known that if there exist heterogeneous effects, dynamic or in treatment, $\beta_{mt}$ will be biased \parencite{roth2023a}.
 
-A side note: I choose not to include the classic leads and lags equation -- perhaps influenced by my supervisor -- because Callaway-st-Anna does not really use leads and lags but creates simple did pairs using long differences and then and then aggregate them. If there are any strong objections here I will of course consider adding a traditional eventstudy equation during revision. A important thing to know is that the Callaway-st-Anna estimator uses all the data and the result is not impacted by the choice of lead and lags. 
+It has historically been common to estimate this design using two-way fixed effects (TWFE), but it is now well known that if there exist heterogeneous effects, dynamic or in treatment, the beta-coefficient will be biased \parencite{roth2023a}.
 
+A small side note. I choose not to include the classic leads and lags equation -- perhaps influenced by my supervisor -- because Callaway-st-Anna does not really use leads and lags but creates simple diff-in-diff pairs, using long differences, and then and then aggregate them. 
+
+If there are any strong objections here I will of course consider adding a traditional event-study equation during revision. 
+
+ \textbf{NEXT SLIDE}
 
 \section{Results}
 
+I will now show the results, starting with the effect of opening a store on Systembolaget sales. Then I will show the main results on mortality and motor vehicle accident.
 
-\subsection{Sales 2x store}
-TODO: DESCRIBE THE TEST
+\textbf{NEXT SLIDE}
 
-The Saturday experiments by Norström and Skog tested the effect of letting Systembolaget sell alchol on Saturdays. The test was conducted twice: first in some test regions and then for the whole contry. Phase one was conducted in the beginning of the year 2000 and the second phase in mid-2001. 
+\subsection{2x sales, Panelview}
+To have some idea of the treatment dose-size or intensity, I conduct two tests.
 
-Recall that the 2nd store test uses the 1978-2008 data, so there is partial overlap.
+The first uses untreated municipalities as control and, as I see it, is a test to check that the treatment definition is correctly specified. The expectation is simply that we observe positive sales after a store opens.
+
+The 2nd store test is more interesting. It uses municipalities with 1 store as control and estimates the effect on sales from opening a second store in the municipality.
+
+The figures to the right show the staggered adoption schedule for both tests. 
+
+ANY QUESTIONS?
+
+\textbf{NEXT SLIDE}
+
+As we can see in the top-most event study plot, there is indeed a positive sales-response.
+
+The 2nd store test show that municipalities that open a 2nd store increase their sales with about 33\%. 
+
+I will return to this result in at the end of this section.
+
+\textbf{NEXT SLIDE}
+
+\subsection{Results: Mortality} 
+
+Here is the adoption schedule for the main sample. Not much to see here except to note that N =115 and T = 29. Another thing is that cohorts are quite small, if you look at the y-axis.
+
+\textbf{NEXT SLIDE}
+
+Here we see the first of the main results: the effect of opening a store on all-cause mortality. 
+
+I will say that I was quite surprised at this initially, but as you know there is more to the story. 
+
+\textbf{NEXT SLIDE}
+
+As you can see -- even if the parallel trends are imperfect -- there is clearly a population increase that is approximately concurrent with the treatment timing. 
+
+I don't know why \emph{exactly}, but it doesn't seem that surprising to me. Perhaps the local government is forward-looking and applies to open a store expecting a population increase.
+
+\textbf{NEXT SLIDE}
+
+An important question is how to take population into account. I considered several options. 
+
+1. The first option introduces a ratio problem that I describe in the paper. In essence, there is no way for the researcher to know it the effect comes from the numerator, denominator or both. 
+
+2. Including 2 \emph{with} 1 can fix the ratio problem, but population is still endogenous. 
+
+3. Finally, Using lagged values of population size is not an option either since "\emph{lagged values become future values as time passes}".
+
+Thankfully callaway-st-anna has an option to force the time-varying population size become time-invariant by fixing population size to the pre-treatment value. 
+
+Q: Is everyone following?
 
 
 
-TODO: After showing Sutva, just show the HONEST PLOT and descripte it very briefly. 
+\TODO{If Q: The function sets the value of the covariate to match its value in the \emph{base period}. For post-treatment periods, the base period is the last period before a group begins receiving treatment. For pre-treatment periods, the base period refers to the period immediately preceding the current one}
 
- 
+\textbf{NEXT SLIDE}
+
+And here is the result of including population size as a covariate.
+
+There is some movement after 10 years, but it's hardly anything to get excited about. 
+
+If there is an effect on all-cause mortality, then the signal is too weak for me to detect it, given the raw material I'm using.
+
+\textbf{NEXT SLIDE}
+
+\subsection{Results: CARS}
+
+Here is the result for motor vehicle accidents.
+
+I think that, in general, the further away from $t = 0$ you go the less credible the result. 
+
+Because all-cause mortality includes deaths from short, medium and long term causes, I tried to find something that -- theoretically -- would react faster than mortality. 
+
+Again, there is no noticeable effect on car accidents.
+
+\textbf{NEXT SLIDE}
+
+\section{SUTVA}
+
+I will now explain the SUTVA test and comment briefly on the results.
+
+In this setting, what we are worried about is cross-border spillover: Individuals can travel to the neighboring municipality to purchase alcohol.
+
+To check if this happens, I define a municipality as treated when a neighbor opens a store. If SUTVA is violated, there should be a negative effect on sales.
+
+\textbf{NEXT SLIDE}
+
+There is indeed some violations for the 1978-2008 sample. Intersetingly, there is no \emph{detectable} violations for the 2nd store test. 
+
+\textbf{NEXT SLIDE}
+
+\subsection{Dose size compared}
+
+I think I will end on this slide and skip the Honest DiD result. 
+
+If you want, I can show the final 2 slides during the discussion if anyone hade some thoughs on that.
+
+Before summing up, I would like to make a brief comparison with a earlier result by Norström and skog (2005). 
+
+The Saturday experiments by Norström and Skog -- detailed in the thesis --  tested the effect of letting Systembolaget sell alcohol on Saturdays, in effect increasing the 'supply' by one extra day. 
+
+The test was conducted twice: first in selected test regions and then for the whole country. Phase one was conducted in the beginning of the year 2000 and the second phase in mid-2001. 
+
+The table you see here replicates the result from that paper and it is interesting to see that the effect of the 2nd store test is in the same general ballpark as the Saturday experiment.
+
+Now, let me sum up what I have done.
+
+I have exploited the staggered expansion of systembolaget to capture the causal effect of increreasing alchol availability on health, as measured by all-cause mortality and motorviechle incidents. 
+
+I detect clear signs of a large 1st stage effect in the increase in sales -- but with several caveats, listed here.
+
+As you have seen, there is no clear signs that there is a effect of alcohol consumption on health in this experiment. 
+
+I think this has more todo with the limitations of the data and also the design: perhaps drawing a smaller circle around each store, or something like that, would be better.
+
+Now I look forward to hearing your thoughts. Thank you.
  
 
 

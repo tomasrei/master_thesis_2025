@@ -3,7 +3,10 @@
   width: 150px !important;
   max-width: unset !important;
   max-height: unset !important;
+  /* If you set a slide background to white, the row below will hide the logo on that slide! */
+  z-index: -999 !important; 
 }
+
 
 
 

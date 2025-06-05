@@ -23,7 +23,8 @@ engine: knitr
 #embed-resources: true
 editor: visual
 ---
-# TODO
+
+TODO:
 
 
 <!-- 
@@ -33,15 +34,21 @@ https://github.com/shafayetShafee/reveal-header?tab=readme-ov-file
 Alternative: https://github.com/shafayetShafee/metropolis-beamer/tree/main
 -->
 
-+ Remove section numbers completley?
++ Do 1st: read the text directly and time it. Decide what todo after this!
++ Add more bullets to the historical background!
++ fix spelling error in 1st plot.
++ Remove the motivation?
++ Put the double-plots side by side and make them bigger (remove text if needed)
 + The images before the table or NOT in svg format and therefore blurry. fix.
-+ Read the tables and write in significance stars with red ink in case I get asked about it!
++ Read the tables in the paper and write in significance stars with red ink in case I get asked about it!
++ look at all the plots in the appendix
 
 # Motivation
 
-It's a big problem
+1. It's a big problem
 
-Limited credible *causal* evidence
+2. Limited credible *causal* evidence
+
 
 
 ## Big problem
@@ -73,12 +80,13 @@ Limited credible *causal* evidence
 # Roadmap
 
 1. ~~Motivation~~
-1.  Historical Background 
+1.  Roadmap
+1.  Historical Background
 2.  Institutional setting
 3.  Data
-4.  Empirical strategy and design
+4.  Empirical strategy
 5.  Results
-6.  Robustness
+6.  Further tests (Robustness)
 7.  Discussion
 
 # Historical Background
@@ -87,7 +95,7 @@ Limited credible *causal* evidence
 
 ::: {.column width="40%"}
 + Before Bratt: high levels of alcohol consumption and the 1922 prohibition referendum
-+ The Bratt system: a system of individual control
++ The Bratt system: a system of individual control (approx. 1920-1955)
 + After Bratt: Systembolaget
 
 
@@ -101,26 +109,15 @@ Limited credible *causal* evidence
 
 
 # Institutional setting
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-+ TODO: Edit these 2 in oblsidian and remove whitespace betwen them and save as SVG
-
-:::
-
-::: {.column width="50%"}
-
-![](images/share_munic_treated.png)
-
-![](images/national_store_plot.png)
-:::
-
-::::
+![](images/2x_rollout.svg)
 
 
 
+Guidelines:
+
++ 1955-82: Main town to nearest store > 40 km; Population > 5000
++ After 1982: Main town to nearest store > 30km
++ Stated goal of 'a couple' new store locations (municipalities) per year^[Average time from announcement to opening was 30 months (std. dev 20), based on 90 store openings.]
 
 
 ## A snapshot from 1955
@@ -141,10 +138,13 @@ Limited credible *causal* evidence
 # Data
 
 + All cause mortality (1968-2023)
+  + Municipality of residence
 
 + Motor vehicle accidents (1985-2023)
-
-+ Sales in Liters of alcohol (1978-2008)
+  + Municipality of accident
+  
++ Sales in Liters of (1978-2008)´
+  + 100° alcohol
 
 ## Municipality reforms and sample restrictions
 
@@ -152,9 +152,7 @@ Limited credible *causal* evidence
 
 + Mortality data aggregated to 1995 municipal borders
 
-INSERT DCDH AND CS PLOT HERE (MAKE A NEW ONE!)
-  + Or maybe skip as this reveals the result? Maybe add at the end, after robustness?
-
++ Martality sample restricted to 1968-1996
 
 
 
@@ -188,7 +186,7 @@ The population equation of interest is
 ::: {.column width="50%"}
 + 1st store test uses municipalities with no store a the control group
 
-+ 2nd store test uses municipalities with *only* one store as control group
++ 2nd store test uses municipalities with *only* one store as control group^[Included in the treatment group for the 2nd store test are: <br> Borgholm, Enköping, Härjedalen, Järfälla, Kävlinge, <br>Malung-Sälen, Sollefteå, Sollentuna, Västervik and Åre.]
 :::
 
 ::: {.column width="50%"}
@@ -202,103 +200,86 @@ The population equation of interest is
 
 
 
-## First and second store results {.smaller}
+## 1st and 2nd store results {.smaller background-color="white"}
+![](images/sales_results.svg)
 
-:::: {.columns}
++ 1st store test: positive increase^[The 1st coefficient is lower is because of late in the year store openings]
 
-::: {.column width="50%"}
-The 1st store test (mechanically) confirms that the treatment is well-defined, i.e. municipalities see positive in-store sales compared to municipalities without a store.
-
-+ (The reason why the first coefficient is much lower is because of late in the year store openings)
-
-The 2nd store test is more interesting. It shows that municipalities that open a 2nd store increase their sales with about 25%.
-
-
-
-
-:::
-
-::: {.column width="50%"}
-![](images/sales_results.svg){fig-align="center" width="11cm"}
-:::
-
-::::
-
-
-
-
++ 2nd store test ATT: 33\%^[$=\text{exp}(0.28432)-1$]
 
 ## Staggered adoption schedule (mortality)
 
-:::: {.columns}
 
-::: {.column width="50%"}
-+ temp
-:::
 
-::: {.column width="50%"}
-![](images/PV_main_rollout.svg)
-:::
+![](images/PV_main_rollout.svg){fig-align="center"}
 
-::::
 
 
 ## All-cause mortality
-:::: {.columns}
 
-::: {.column width="30%"}
-+ Decide if you want one or 2 columns (depends on if you want any text. IWait until manuscript is done.)
-:::
-
-::: {.column width="70%"}
 ![](images/mod1_deaths_CS.svg)
-:::
 
-::::
 
 ## Population size
 
-:::: {.columns}
-
-::: {.column width="50%"}
-+ temp
-:::
-
-::: {.column width="50%"}
 ![](images/mod2_deaths_CS.svg)
-:::
 
-::::
+## Taking population into account
+
+1. $y_{mt} = \frac{\#Deaths}{\#Population}$
+2. $\frac{1}{\#Population}$
+3. Including lagged values of population size
+
+Instead:  Callaway and Sant'Anna (2021)
 
 ## All-cause mortality adjusting for population size
 
-:::: {.columns}
-
-::: {.column width="50%"}
-+ tempxxxxx
-:::
-
-::: {.column width="50%"}
 ![](images/mod3_deaths_CS.svg)
-:::
-
-::::
 
 ## MVs
-:::: {.columns}
 
-::: {.column width="50%"}
-+ temp
-:::
-
-::: {.column width="50%"}
 ![](images/mod4_cars_CS.svg)
-:::
 
+
+
+
+# SUTVA: definiton
+:::: {.columns}
+::: {.column width="40%"}
+Concern: cross-boundary spillover
+
+Test: define minicipalities with at least one store as treated when the *neighboring* municipality open a store.
+  
+  + Comparison group has at least one store but the neighbour does *not* open a store.
+
+If SUTVA is violated, there should be a negative effect on sales.  
+  
+:::
+::: {.column width="60%"}
+![](images/sutva_map.svg){fig-align="center"}
+
+
+:::
+::::
+
+## SUTVA: results {.smaller background-color="white"}
+:::: {.columns}
+::: {.column width="40%"}
+There is indeed some violations of the SUTVA assumption (ATT = 5%) for the full sample.
+
+Using the 2nd store test sample, there is no detectable violations agains SUTVA.
+
+
+:::
+::: {.column width="60%"}
+![](images/sutva_results.svg){.absolute top="-1cm" right="0.2cm"}
+
+
+:::
 ::::
 
 
-# Dose size compared
+# Summing up
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -318,33 +299,7 @@ If we multiply the coefficient on total alcohol sales from the 'Saturday' experi
 
 ::::
 
-
-# Robustness
-Describe section
-
-## SUTVA: definiton
-:::: {.columns}
-::: {.column width="40%"}
-Describe the test and treatment df
-:::
-::: {.column width="60%"}
-![](images/sutva_map.svg){fig-align="center"}
-
-
-:::
-::::
-
-## SUTVA: results
-:::: {.columns}
-::: {.column width="40%"}
-Interpretation
-:::
-::: {.column width="60%"}
-![](images/sutva_results.svg){fig-align="center" width="11cm"}
-
-
-:::
-::::
+....
 
 ## HonestDiD: Intuition
 :::: {.columns}
