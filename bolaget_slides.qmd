@@ -6,8 +6,9 @@ date: last-modified
 date-format: "DD MMMM, YYYY"
 format: 
   revealjs:
-    multiplex: true
-    embed-resources: true
+    multiplex:
+      id: '8d1d70ef46b9e764'   # Needed for synch with other machines
+    embed-resources: true 
     smaller: true # Fits longer text to slide
     slide-number: true
     center-title-slide: false
