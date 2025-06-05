@@ -71,15 +71,18 @@ editor: visual
 
 ::: {.column width="40%"}
 Before Bratt: 
-  + High levels of alcohol consumption (vodka belt) 
-  + 1922 prohibition referendum
+
++ High levels of alcohol consumption (vodka belt) 
++ 1922 prohibition referendum
 
 The Bratt system: a system of individual control (approx. 1920-1955)
-  + Rationing booklet
-  + Additional controls such as individual sanctions
+
++ Rationing booklet
++ Additional controls such as individual sanctions
 
 After Bratt: Systembolaget
-  + Established in the end of 1955
+
++ Established in october, 1955.
 
 
 :::
