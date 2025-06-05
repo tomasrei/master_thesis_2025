@@ -8,6 +8,7 @@ format:
   revealjs:
     multiplex:
       id: '8d1d70ef46b9e764'   # Needed for synch with other machines
+      secret: '17491147135499356507'  # Also needed
     embed-resources: true 
     smaller: true # Fits longer text to slide
     slide-number: true
